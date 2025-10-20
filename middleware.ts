@@ -16,9 +16,7 @@ export default clerkMiddleware(async (auth, request) => {
         return NextResponse.redirect(new URL('/dashboard', request.url))
 
     if(!isPublicRoute(request)) await auth.protect()
-
-    
-})
+});
 
 export const config = {
   matcher: [
