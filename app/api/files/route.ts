@@ -31,6 +31,7 @@ export async function GET(request: NextRequest){
 
         return NextResponse.json({ files: userFiles })
     } catch (error) {
+        console.error(error)
         return NextResponse.json({ error: "Failed to get files" }, { status: 500 })
     }
 }
