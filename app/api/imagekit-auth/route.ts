@@ -17,6 +17,7 @@ export async function GET() {
     
         return NextResponse.json(authenticationParameters)
     } catch (error) {
+        console.error(error)
         return NextResponse.json({ error: "Failed to get authentication parameters for ImageKit" }, { status: 500 })
     }
 }
